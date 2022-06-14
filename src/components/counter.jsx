@@ -1,10 +1,13 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 class Counter extends Component {
-     
-    render() { 
-     
-        return <h1>Hello world</h1>;
-    }
+  render() {
+    return (
+      <React.Fragment>
+        <h1>Hello world</h1>
+        <button>increment</button>
+      </React.Fragment>
+    );
+  }
 }
- 
+
 export default Counter;
