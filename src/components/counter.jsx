@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 class Counter extends Component {
      
     render() { 
-        return <h1></h1>;
+     
+        return <h1>Hello world</h1>;
     }
 }
  
