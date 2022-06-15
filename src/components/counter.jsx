@@ -9,8 +9,9 @@ class Counter extends Component {
     super();
     this.handleIncrement =this.handleIncrement.bind(this)
   }
-  handleIncrement() {
-    console.log("Increment Clicked");
+  handleIncrement=() =>{
+   
+    this.setState({count: this.state.count +1})
   }
   style = {
     fontSize: 50,
@@ -63,7 +64,7 @@ class Counter extends Component {
         {/* <h1>Hello world</h1> */}
         <span className="badge badge-primary m-2">{this.formatCount()}</span>
         <button
-          onClick={this.state.handleIncrement}
+          onClick={this.handleIncrement}
           className="btn btn-secondary btn-sm"
         >
           increment
