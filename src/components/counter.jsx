@@ -58,7 +58,7 @@ class Counter extends Component {
         <button className="btn btn-secondary btn-sm">increment</button>
         <div>
         <ul>
-          {this.state.tags.map(tag=><li>{tag}</li>)}
+          {this.state.tags.map(tag=><li key={tag}>{tag}</li>)}
         </ul>
         </div>
       </React.Fragment>
