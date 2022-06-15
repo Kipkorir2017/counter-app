@@ -1,13 +1,20 @@
 import React, { Component } from "react";
 class Counter extends Component {
   state = {
-    tags:["tag1","tag2","tag3"],
+    tags: ["tag1", "tag2", "tag3"],
     count: 0,
     imageUrl: "https://picsum.photos/400",
   };
+  constructor(){
+    super();
+    this.handleIncrement =this.handleIncrement.bind(this)
+  }
+  handleIncrement() {
+    console.log("Increment Clicked");
+  }
   style = {
-    fontSize:50,
-    fontWeight:900
+    fontSize: 50,
+    fontWeight: 900,
   };
   render() {
     return (
@@ -55,11 +62,18 @@ class Counter extends Component {
         <img src={this.state.imageUrl} alt="" />
         {/* <h1>Hello world</h1> */}
         <span className="badge badge-primary m-2">{this.formatCount()}</span>
-        <button className="btn btn-secondary btn-sm">increment</button>
+        <button
+          onClick={this.state.handleIncrement}
+          className="btn btn-secondary btn-sm"
+        >
+          increment
+        </button>
         <div>
-        <ul>
-          {this.state.tags.map(tag=><li key={tag}>{tag}</li>)}
-        </ul>
+          <ul>
+            {this.state.tags.map((tag) => (
+              <li key={tag}>{tag}</li>
+            ))}
+          </ul>
         </div>
       </React.Fragment>
     );
