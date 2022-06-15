@@ -1,8 +1,13 @@
 import React, { Component } from "react";
 class Counter extends Component {
   state = {
+    tags:["tag1","tag2","tag3"],
     count: 0,
     imageUrl: "https://picsum.photos/400",
+  };
+  style = {
+    fontSize:50,
+    fontWeight:900
   };
   render() {
     return (
@@ -51,6 +56,11 @@ class Counter extends Component {
         {/* <h1>Hello world</h1> */}
         <span className="badge badge-primary m-2">{this.formatCount()}</span>
         <button className="btn btn-secondary btn-sm">increment</button>
+        <div>
+        <ul>
+          {this.state.tags.map(tag=><li>{tag}</li>)}
+        </ul>
+        </div>
       </React.Fragment>
     );
   }
