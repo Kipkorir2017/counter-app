@@ -2,7 +2,7 @@ import React, { Component } from "react";
 class Counter extends Component {
   state = {
     count: 0,
-    imageUrl: "https://picsum.photos/200",
+    imageUrl: "https://picsum.photos/400",
   };
   render() {
     return (
@@ -47,10 +47,10 @@ class Counter extends Component {
             </ul>
           </div>
         </nav>
-        <img src="{this.state.imageUrl}" alt="" />
+        <img src={this.state.imageUrl} alt="" />
         {/* <h1>Hello world</h1> */}
-        <span>{this.formatCount()}</span>
-        <button>increment</button>
+        <span className="badge badge-primary m-2">{this.formatCount()}</span>
+        <button className="btn btn-secondary btn-sm">increment</button>
       </React.Fragment>
     );
   }
