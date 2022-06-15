@@ -12,6 +12,10 @@ class Counter extends Component {
   handleIncrement=() =>{
    
     this.setState({count: this.state.count +1})
+    
+  }
+  handleDecrement=()=>{
+    this.setState({count: this.state.count -1})
   }
   style = {
     fontSize: 50,
@@ -65,9 +69,15 @@ class Counter extends Component {
         <span className="badge badge-primary m-2">{this.formatCount()}</span>
         <button
           onClick={this.handleIncrement}
-          className="btn btn-secondary btn-sm"
+          className="btn btn-secondary btn-sm m-2"
         >
-          increment
+          like
+        </button>
+        <button
+          onClick={this.handleDecrement}
+          className="btn btn-dark btn-sm "
+        >
+          unlike
         </button>
         <div>
           <ul>
