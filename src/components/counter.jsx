@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 class Counter extends Component {
   state = {
-    tags: ["tag1", "tag2", "tag3"],
-    count: 0,
+    
+    count: this.props.value,
     imageUrl: "https://picsum.photos/400",
   };
   constructor(){
@@ -25,6 +25,7 @@ class Counter extends Component {
     fontWeight: 900,
   };
   render() {
+     
     return (
       <React.Fragment>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
