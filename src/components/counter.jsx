@@ -8,7 +8,7 @@ class Counter extends Component {
   constructor(){
     super();
     this.handleIncrement =this.handleIncrement.bind(this)
-  }
+  };
   handleIncrement=() =>{
    
     this.setState({count: this.state.count +1})
@@ -16,7 +16,10 @@ class Counter extends Component {
   }
   handleDecrement=()=>{
     this.setState({count: this.state.count -1})
-  }
+  };
+  dohandleIncrement=()=>{
+    this.handleIncrement({id:1})
+  };
   style = {
     fontSize: 50,
     fontWeight: 900,
