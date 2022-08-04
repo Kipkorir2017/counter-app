@@ -52,17 +52,17 @@ class Counter extends Component {
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">
-                  Features
+                Roles
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">
-                  Pricing
+                  Price
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link disabled" href="#">
-                  Disabled
+                
                 </a>
               </li>
             </ul>
